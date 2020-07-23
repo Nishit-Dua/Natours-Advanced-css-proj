@@ -1,0 +1,14 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "A web site i am trying to builfing by following a course on learning css",
+  "main": "index.js",
+  "scripts": {
+    "compile-scss": "node-sass scss/main.scss css/style.css -w"
+  },
+  "author": "Nishit Dua",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

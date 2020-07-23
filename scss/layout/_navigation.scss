@@ -1,0 +1,125 @@
+.navigation{
+    &__check-box{
+        display: none;
+    }
+
+    &__button{
+        height: 7rem;
+        width: 7rem;
+        background-color: $color-white;
+        display: block;
+        border-radius: 100%;
+
+        position: fixed;
+        top: 5rem;
+        right: 6rem;
+        z-index: 60;
+
+        cursor: pointer;
+        text-align: center;
+        transition: all 0.3s;
+    }
+
+    &__background{
+        height: 6rem;
+        width: 6rem;
+        background: radial-gradient($color-green-light, $color-green-dark);
+        border-radius: 100%;
+
+        position: fixed;
+        top: 5.5rem;
+        right: 6.5rem;
+        z-index: 50;
+
+        transition: all 0.5s ease-in;
+    }
+
+    &__nav{
+        height: 100vh;
+        width: 100vw;
+
+        position: fixed;
+        z-index: 55;
+        top: 0;
+        left: 0;
+
+        visibility: hidden; //we are not using visibility as it is not animatable
+        opacity: 0;
+        transition: all 0.5s;
+    }
+
+    &__list{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        list-style: none;
+        text-align: center;
+    }
+
+    &__items{
+
+        // &:hover{
+        //     back
+        // }
+
+        &:not(:last-child){
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    &__link{
+        &:link,
+        &:visited{
+            display: inline-block;
+
+            text-decoration: none;
+            font-weight: 300;
+            font-size: 3rem;
+            color: $color-white;
+            text-transform: uppercase;
+            padding: 1rem 2rem;
+
+            background-image: linear-gradient(120deg,transparent 0%,transparent 50%,white 50%);
+            background-size: 250%;
+            transition: all 0.3s;
+
+            span{
+                margin-right: 1rem;
+            }
+        }
+
+        &:hover,
+        &:active{
+            color: $color-green-dark;
+            background-position: 100%;
+            transform: scale(1.05) translateX(1.5rem);
+        }
+    }
+
+    &__check-box:checked ~ &__background{
+        transform: scale(100);
+    }
+
+    &__check-box:checked ~ &__nav{
+        visibility: visible; // not animatable
+        opacity: 1;
+    }
+
+    .nav__icon{
+        margin-top: 2.5rem;
+        font-size: 1.3rem;
+        transition: all 0.25s;
+        text-transform: uppercase;
+    }
+
+    &__button:hover{
+        color: $color-white;
+        background: #424242;
+    }
+
+    &__button:hover > .nav__icon {
+        transform: scale(1.2) rotate(360deg);
+    }
+}
