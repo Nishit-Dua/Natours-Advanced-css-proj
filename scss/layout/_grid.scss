@@ -1,5 +1,14 @@
 .row {
     max-width: $grid-width;
+
+    @include respond(tab-land){
+        max-width: 85vw;
+    }
+
+    @include respond(tab-port){
+        max-width: $grid-width-small;
+    }
+
     // background-color: $color-white;
     margin: 0 auto;
     margin-bottom: $margin-btm;
@@ -13,13 +22,18 @@
 
     [class ^= "col-"]{
         float: left;
-        color: $color-white;
-        font-size: 2rem;
-        background-image: $color-coloumn;
-        text-align: center;
-        padding: 2.5rem;
+
         &:not(:last-child){
             margin-right: $margin-horz;
+
+            @include respond(tab-port){
+                margin-right: 0;
+                margin-bottom: 6rem;
+            }
+        }
+
+        @include respond(tab-port){
+            width: 100% !important;
         }
     }
 

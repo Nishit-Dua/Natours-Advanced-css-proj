@@ -8,6 +8,10 @@
     box-shadow: 0 2rem 6rem rgba($color: $color-black, $alpha: 0.25);
     transform: skewX(-15deg);
     font-size: 1.6rem;
+
+    @include respond(phone){
+        transform: skewX(0);
+    }
     // -webkit-backface-visibility: hidden;
     // backface-visibility: hidden;
 
@@ -22,14 +26,25 @@
         clip-path: circle(45% at 50% 50%);
         -webkit-clip-path:circle(50% at 50% 50%);
         transform: translateX(-2.8rem) skewX(15deg);
+
+        @include respond(phone){
+            transform: translateX(-2.8rem) skewX(0);
+        }
     }
 
     h3{
         transform: skewX(15deg);
+        @include respond(phone){
+            transform: skewX(0);
+        }
     }
 
     p{
         transform: skewX(15deg);
+        
+        @include respond(phone){
+            transform: skewX(0);
+        }
     }
 
     &__image{

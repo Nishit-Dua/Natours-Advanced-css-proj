@@ -26,6 +26,11 @@
         display: inline-block;
         padding-top: 2.3rem;
         border-top: 1px solid rgb(94, 94, 94);
+
+        @include respond(tab-port){
+            text-align: center;
+            width: 100%;
+        }
     }
 
     &__list{
@@ -58,10 +63,16 @@
     }
 
     &__copyright{
-        display: inline-block;
+        display: block;
         padding-top: 2.3rem;
         border-top: 1px solid rgb(94, 94, 94);
         width: 80%;
         float: right;
+
+        @include respond(tab-port){
+            text-align: center;
+            float: none;
+            width: 100%;
+        }
     }
 }

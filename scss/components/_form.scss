@@ -20,6 +20,10 @@
         display: block;
         width: 80%;
 
+        @include respond(tab-port){
+            width: 100%;
+        }
+
         &:invalid{
             outline: none;
         }
@@ -66,6 +70,14 @@
     &__radio-group{
         width: 49%;
         display: inline-block;
+
+        @include respond(phone){
+            width: 100%;
+
+            &:not(:last-child){
+                margin-bottom: 2rem;
+            }
+        }
     }
 
     &__radio-label{
@@ -108,5 +120,11 @@
 
     &__radio-input:checked ~ &__radio-label &__radio-btn::after{
         opacity: 1;
+    }
+
+    &-btn{
+        @include respond(phone){
+            margin-top: 1rem;
+        }
     }
 }

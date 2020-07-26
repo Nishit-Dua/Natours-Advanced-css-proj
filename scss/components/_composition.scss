@@ -7,7 +7,7 @@
         position: absolute;
         box-shadow: 0.5rem 2rem 4rem rgba($color-black,0.5);
         transition: all 0.2s;
-        z-index: 0;
+        z-index: 5;
         outline-offset: 2rem;
     
 
@@ -30,7 +30,7 @@
             outline: 1rem solid $color-green-dark;
             transform: scale(1.1);
             box-shadow: 1rem 3.5rem 4rem rgba($color-black,0.6);
-            z-index: 1;
+            z-index: 51;
         }
     }
 

@@ -11,6 +11,11 @@
     
         animation-name: MoveFromLeft;
         animation-duration: 1s;
+
+        @include respond(phone){
+            font-size: 5rem;
+            letter-spacing: 1rem;
+        }
     
         /*
         animation-timing-function: ease-out;
@@ -27,6 +32,10 @@
      
         animation-name: MoveFromRight;
         animation-duration: 1s;
+
+        @include respond(phone){
+            letter-spacing: .5rem;
+        }
     }
 }
 
@@ -34,12 +43,21 @@
     background-image: linear-gradient(to right, $color-green-light, $color-green-dark);
     display: inline-block;
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
     text-transform: uppercase;
-    font-size: 3.4rem;
+    font-size: 3.5rem;
     font-weight: 600;
     letter-spacing: 0.2rem;
     transition: all 0.2s;
+
+    @include respond(tab-port){
+        font-size: 3rem;
+    }
+
+    @include respond(phone){
+        font-size: 2.5rem;
+    }
 
     &:hover{
         transform: skew(9deg, 2deg) scale(1.05);

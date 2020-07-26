@@ -6,10 +6,20 @@
     box-sizing: inherit;
 }
 
-
-
 html {
     font-size: 10px;
+
+    @include respond(tab-land){
+        font-size: 9px;
+    }
+
+    @include respond(tab-port){
+        font-size: 8px;
+    }
+
+    @include respond(big-desktop){
+        font-size: 12px;
+    }
 }
 
 body {
@@ -17,4 +27,14 @@ body {
     padding: 3rem;
     color: $color-grey;
     box-sizing: border-box;
+
+    @include respond(tab-port){
+        padding: 0;
+    }
 }
+
+::selection{
+    background-color: $color-green-light;
+    color: $color-white;
+}
+
